@@ -1,10 +1,10 @@
 export class ResponseData<D> {
   statusCode: number;
-  data: D | D[];
   message: string;
-  constructor(statusCode: number, data: D | D[], message: string) {
+  data: D | D[];
+  constructor(statusCode: number, message: string, data: D | D[]) {
     this.statusCode = statusCode;
-    this.data = data;
     this.message = message;
+    this.data = data;
   }
 }

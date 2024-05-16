@@ -63,7 +63,7 @@ export class AuthService {
           name: userDto.name,
         },
       });
-
+      delete user.password;
       return user;
     } catch (error: any) {
       if (error instanceof PrismaClientKnownRequestError) {
